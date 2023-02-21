@@ -89,6 +89,7 @@ public class AdminController {
 
 		try {
 			
+			adminService.updateAdmin(adminEntity);
 				return new ResponseEntity<>("Success",HttpStatus.OK);
 
 			
