@@ -19,6 +19,7 @@ import lombok.Data;
 public class UserEntity {
 	//primary key
 	@Id
+	@GeneratedValue
 	@Column(name="USER_ID")
 	private Integer userId;
 	//name of the user

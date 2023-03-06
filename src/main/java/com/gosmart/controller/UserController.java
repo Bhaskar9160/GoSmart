@@ -51,7 +51,7 @@ public class UserController {
 		}
 	}
 	
-	@GetMapping("/user/login")
+	@PostMapping("/user/login")
 	public ResponseEntity<UserEntity> getUser(@RequestBody UserEntity userEntity)
 	{
 		log.info("{}-UserController getUser() started",UserConstants.USER);
@@ -61,6 +61,7 @@ public class UserController {
 			log.info("{}-UserController getUser() saving userDetails in repository",UserConstants.USER);
 			
 			UserEntity user=userService.getUser(userEntity.getEmailId(), userEntity.getPassword());
+			System.out.println("Successfully logged in");
 			return new ResponseEntity<>(user,HttpStatus.OK);
 		} 
 		catch (Exception e) 

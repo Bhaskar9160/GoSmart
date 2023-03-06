@@ -67,6 +67,7 @@ public class UserServiceImpl implements UserService
 		{
 			log.info("{}-ServiceImpl getUser() saving userDetails in repository",UserConstants.USER);
 			userEntity=userRepository.findByEmailIdAndPassword(emailId, password);
+			System.out.println("Successfull");
 		} 
 		catch (Exception e)
 		{

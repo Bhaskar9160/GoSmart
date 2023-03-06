@@ -52,6 +52,7 @@ public class BranchController {
 			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 	}
+	@GetMapping("/branch/{branchId}")
 	public ResponseEntity<BranchEntity> getBranch(@PathVariable Integer branchId)
 	{
 		log.info("{}-serviceController getBranch() started",BranchConstants.BRANCH_ENTITY);
